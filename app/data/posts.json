@@ -17,6 +17,13 @@
       "title": "データの再検証",
       "content": "shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。shincodeさんの教材でNext.js16を学んでいます。",
       "createdAt": "2026/03/26"
+    },
+    {
+      "id": "ElKsYHNVVkI",
+      "title": "test",
+      "content": "test",
+      "createdAt": "2026-03-25T07:30:04.720Z"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
