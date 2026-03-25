@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
 import { Article } from "../types";
 
 type ArticleListProps = {
@@ -14,7 +13,7 @@ export const ArticleList = ({ articles }: ArticleListProps) => {
         <article className="shadow my-4" key={article.id}>
           <Link href={`articles/${article.id}`} className="hover:opacity-75">
             <Image
-              src="https://picsum.photos/800"
+              src={`https://picsum.photos/seed/${article.id}/800/300`}
               alt=""
               width={1280}
               height={300}
