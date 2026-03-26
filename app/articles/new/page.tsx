@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { createArticle } from "@/app/blogAPI";
+// import { createArticle } from "@/app/blogAPI";
 import { useRouter } from "next/navigation";
 
 const CreateBlogPage = () => {
@@ -20,7 +20,16 @@ const CreateBlogPage = () => {
     setError("");
     setLoading(true);
 
-    await createArticle(id, title, content);
+    // await createArticle(id, title, content);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+    await fetch(`${API_URL}/api/create`, {
+      method: "POST",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify({ id, title, content }),
+    });
 
     setLoading(false);
     router.push("/");
@@ -31,9 +40,7 @@ const CreateBlogPage = () => {
     <div className="min-h-screen py-8 px-4 md:px-12">
       <h2 className="text-2xl font-bold mb-4">ブログ新規作成</h2>
 
-      {error && (
-        <p className="text-red-500 mb-4">{error}</p>
-      )}
+      {error && <p className="text-red-500 mb-4">{error}</p>}
       <form
         className="bg-slate-200 p-6 rounded shadow-lg"
         onSubmit={handleSubmit}
