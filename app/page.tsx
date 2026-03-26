@@ -1,8 +1,11 @@
 import { getAllArticles } from "./blogAPI";
 import { ArticleList } from "./components/ArticleList";
+import { supabase } from "./utils/supabaseClient";
 
 export default async function Home() {
   const articles = await getAllArticles();
+
+  console.log(supabase);
 
   return (
     <div className="md:flex">
