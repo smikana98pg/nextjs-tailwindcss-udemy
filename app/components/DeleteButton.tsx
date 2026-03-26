@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { deleteArticle } from "../blogAPI";
 import { useRouter } from "next/navigation";
 
 type DeleteButtonProps = {
@@ -15,7 +14,8 @@ const DeleteButton = ({ id }: DeleteButtonProps) => {
 
   const handelDelete = async () => {
     setLoading(true);
-    await deleteArticle(id);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    await fetch(`${API_URL}/api/${id}`, { method: "DELETE" });
     setLoading(false);
     router.push("/");
     router.refresh();
